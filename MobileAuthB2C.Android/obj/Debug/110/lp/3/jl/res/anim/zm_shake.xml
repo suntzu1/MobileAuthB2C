@@ -1,1 +1,0 @@
-<translate android:duration="@android:integer/config_shortAnimTime" android:fromXDelta="0" android:interpolator="@anim/zm_cycle_1" android:toXDelta="60" xmlns:android="http://schemas.android.com/apk/res/android"></translate>

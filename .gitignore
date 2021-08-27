@@ -12,10 +12,13 @@
 
 # Visual Studio Files
 .vs/
+
 # Generated files
 bin/
 gen/
 out/
+obj/
+
 #  Uncomment the following line in case you need and you don't have the release build type files in your app
 # release/
 
@@ -31,6 +34,9 @@ proguard/
 
 # Log Files
 *.log
+
+# misc
+*.cache
 
 # Android Studio Navigation editor temp files
 .navigation/

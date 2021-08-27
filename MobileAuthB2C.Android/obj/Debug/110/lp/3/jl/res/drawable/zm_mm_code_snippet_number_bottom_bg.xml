@@ -1,1 +1,0 @@
-<shape android:shape="rectangle" xmlns:android="http://schemas.android.com/apk/res/android"><corners android:bottomLeftRadius="10dp"></corners><solid android:color="@color/zm_code_snippet_number"></solid><size android:height="10dp" android:width="20dp"></size></shape>

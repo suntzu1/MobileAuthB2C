@@ -1,1 +1,0 @@
-<ImageView android:layout_width="130dp" android:layout_height="130dp" android:layout_gravity="center_horizontal" android:src="@drawable/zm_ic_nosystemnotification" xmlns:android="http://schemas.android.com/apk/res/android" />
