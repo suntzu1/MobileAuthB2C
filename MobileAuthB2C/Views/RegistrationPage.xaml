@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="Gia.View.RegistrationPage">
+    <ContentPage.Content>
+         <ScrollView>
+        <StackLayout>
+            <Label Text="Create Account"  
+                HorizontalOptions="CenterAndExpand" Margin="20,30" FontSize="Title"/>  
+            <Entry x:Name="FirstName" Placeholder="First Name" Keyboard="Text" Text="{Binding FirstName}" HeightRequest="50" Margin="20,10"></Entry>
+            <Entry x:Name="LastName" Placeholder="Last Name" Keyboard="Text" Text="{Binding LastName}" HeightRequest="50" Margin="20,10"></Entry>
+            <Entry x:Name="Email" Placeholder="Email" Keyboard="Email" Text="{Binding Email}" HeightRequest="50" Margin="20,10"></Entry>
+            <Entry x:Name="Mobile" Placeholder="Mobile" Keyboard="Telephone" Text="{Binding Mobile}" HeightRequest="50" Margin="20,10"></Entry>
+            <Entry x:Name="Password" Placeholder="Password" IsPassword="True" Text="{Binding Password}" HeightRequest="50" Margin="20,10"></Entry>
+            <Entry x:Name="ConfirmPassword" Placeholder="Confirm Password" IsPassword="True" Text="{Binding ConfirmPassword}" HeightRequest="50" Margin="20,10"></Entry>
+            <Button x:Name="registerbtn" Text="Submit" IsVisible="{Binding IsBtnVisible}" Command="{Binding CreateAccountCommand}" BackgroundColor="#FFBE143C" HeightRequest="50" TextColor="White" FontSize="Subtitle" HorizontalOptions="FillAndExpand" Margin="20,20"></Button>
+        
+            <ActivityIndicator Margin="20,22" x:Name="activityIndicator" IsRunning="{Binding IsLoading}"
+                               IsVisible="{Binding IsLoading}"
+                            Color="#FFBE143C"
+                            />
+            </StackLayout>
+              </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

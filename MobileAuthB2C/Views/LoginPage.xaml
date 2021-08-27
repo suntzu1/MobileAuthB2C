@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:resources="clr-namespace:MobileAuthB2C.Resx"
+             x:Class="MobileAuthB2C.Views.LoginPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Image Source="gia_logo_white.png" />
+            <StackLayout Margin="30,40,30,0" HorizontalOptions="Center" VerticalOptions="Center">
+                <Label Text="{x:Static resources:LangResource.login_using}" ></Label>
+                <Button x:Name="BtnLoginB2C" Text="{x:Static resources:LangResource.login_username}" WidthRequest="280" 
+                        Clicked="OnSignInClicked" CornerRadius="8"></Button>
+                <Button Text="{x:Static resources:LangResource.login_social}" x:Name="BtnLoginSocId"  WidthRequest="280"   
+                    Clicked="SocAuthButton_Clicked"    
+                    HorizontalOptions="Center"    
+                    VerticalOptions="CenterAndExpand" CornerRadius="8"/>
+                <Line HeightRequest="25"></Line>
+                <Button x:Name="LogoutButton" Text="Logout" Clicked="TbiLogout_OnClicked"></Button>
+                <Line HeightRequest="25"></Line>
+                <Button Text="" x:Name="AuthButton" WidthRequest="50"
+                    Clicked="AuthButton_Clicked" CornerRadius="25" BackgroundColor="White" BorderColor="{x:DynamicResource Primary}"
+                    BorderWidth="2" TextColor="{x:DynamicResource Primary}"
+                    HorizontalOptions="Center"  ContentLayout="Left, 10"  ImageSource="finger_print.png"
+                    VerticalOptions="CenterAndExpand">
+                </Button>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

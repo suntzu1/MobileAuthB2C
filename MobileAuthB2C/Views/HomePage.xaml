@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileAuthB2C.Views.HomePage">
+    <Page.Resources>
+        <Style x:Key="CommonBtn" TargetType="Button">
+            <Setter Property="BackgroundColor" Value="#FFBE143C" />
+            <Setter Property="FontSize" Value="Medium" />
+            <Setter Property="TextColor" Value="White" />
+            <Setter Property="HorizontalOptions" Value="Fill" />
+            <Setter Property="MinimumHeightRequest" Value="50"/>
+            <Setter Property="Margin" Value="20,2"/>
+
+        </Style>
+    </Page.Resources>
+
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Grid Margin="20,10,20,0" ColumnSpacing="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Column="0" Text = "Theme" HorizontalOptions="End"
+               VerticalOptions="Center" ></Label>
+                    <Picker Grid.Column="1" Title="Select Theme"
+                        HorizontalOptions="End"
+        TitleColor="#FFBE143C"
+        TextColor="#FFBE143C" 
+        FontSize="Small"
+        ItemsSource="{Binding ThemeList}"
+        ItemDisplayBinding="{Binding ThemeName}"
+                        SelectedItem="{Binding SelectedTheme}"/>
+
+                </Grid>
+
+
+                <Label Text = "{Binding UserData.FirstName, StringFormat='Hi {0:0},'}"
+                HorizontalOptions="StartAndExpand" Margin="20,10,20,0" FontSize="Title"/>
+                <Label Text = "how can I help you today?"
+                HorizontalOptions="StartAndExpand" Margin="20,0,20,20" FontSize="Title"/>
+
+                <Button Text="Urgent/Emergent Care"
+            x:Name="urgentcare"
+            Command="{Binding HomeBtnCommand}"
+            CommandParameter="urgent-care"
+            Style="{StaticResource CommonBtn}"/>
+
+                <Button Text="Behavioral Health"
+            x:Name="behavioral"
+                        Command="{Binding HomeBtnCommand}"
+            CommandParameter="behavioral"
+            Style="{StaticResource CommonBtn}"/>
+
+                <Button Text="Lactation Counseling"
+            x:Name="lactation"
+                        Command="{Binding HomeBtnCommand}"
+            CommandParameter="lactation"
+            Style="{StaticResource CommonBtn}"/>
+
+                <Button Text="Nutritional / Counseling"
+            x:Name="nutritional"
+                        Command="{Binding HomeBtnCommand}"
+            CommandParameter="nutritional"
+            Style="{StaticResource CommonBtn}"/>
+
+                <Button Text="Physical Therapy"
+            x:Name="physicalTherapy"
+                    Command="{Binding HomeBtnCommand}"
+            CommandParameter="physicalTherapy"
+            Style="{StaticResource CommonBtn}"/>
+
+                <Button Text="Screening / Test Consult"
+            x:Name="screening"
+                    Command="{Binding HomeBtnCommand}"
+            CommandParameter="screening"
+            Style="{StaticResource CommonBtn}"/>
+
+                <Button Text="RxRefill Consult"
+            x:Name="rxrefill"
+                    Command="{Binding HomeBtnCommand}"
+            CommandParameter="rxrefill"
+            Style="{StaticResource CommonBtn}"/>
+
+                <Button Text="Covid-19 Care"
+            x:Name="covid19"
+                    Command="{Binding HomeBtnCommand}"
+            CommandParameter="covid19-care"
+            Style="{StaticResource CommonBtn}"/>
+
+                <Button Text="Learn about a topic"
+            x:Name="learnabouttopic"
+                    Command="{Binding HomeBtnCommand}"
+            CommandParameter="learn-about-topic"
+            Style="{StaticResource CommonBtn}"/>
+
+                <Button Text="My Meds, Allergies, Pharmacies, Visits"
+            x:Name="profile"
+                     Command="{Binding HomeBtnCommand}"
+            CommandParameter="profile"
+            Style="{StaticResource CommonBtn}"/>
+
+                <Button Text="Provider Locator"
+            x:Name="provider"
+                     Command="{Binding HomeBtnCommand}"
+            CommandParameter="provider"
+            Style="{StaticResource CommonBtn}"/>
+
+            </StackLayout>
+
+
+
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
