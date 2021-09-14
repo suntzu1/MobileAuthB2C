@@ -10,7 +10,7 @@
         public static readonly string SignInPolicy = "B2C_1_b2c_su_si_mfasms";
         public static readonly string SignInPolicySoc = "B2C_1_b2c_su_si_soc";
         public static readonly string PolicyPassword = "B2C_1_passwordreset";
-        public static string IosKeychainSecurityGroups = "com.microsoft.abemvptesting";
+        public static string IosKeychainSecurityGroups = "com.microsoft.adalcache";
         public static readonly string[] Scopes = new[] { "openid", "offline_access" };
 
         public static string AuthorityBase = $"https://{TenantName}.b2clogin.com/tfp/{TenantId}/";

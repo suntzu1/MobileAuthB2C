@@ -4,8 +4,7 @@
 <dict>
 	<key>keychain-access-groups</key>
 	<array>
-		<string>$(AppIdentifierPrefix)com.companyname.MobileAuthB2C</string>
-		<string>$(AppIdentifierPrefix)com.microsoft.abemvptesting</string>
+		<string>$(AppIdentifierPrefix)com.microsoft.adalcache</string>
 	</array>
 </dict>
 </plist>
