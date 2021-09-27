@@ -34,6 +34,8 @@
 	<string>MobileAuthB2C</string>
 	<key>XSAppIconAssets</key>
 	<string>Assets.xcassets/AppIcon.appiconset</string>
+	<key>NSFaceIDUsageDescription</key>
+	<string>Need to unlock using Face ID</string>
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
@@ -44,7 +46,7 @@
 				<string>msal294840f4-0bff-4fb0-9399-563044317163://auth</string>
 			</array>
 			<key>CFBundleTypeRole</key>
-			<string>Editor</string>
+			<string>None</string>
 		</dict>
 	</array>
 </dict>

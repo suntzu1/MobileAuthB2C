@@ -102,7 +102,8 @@ namespace MobileAuthB2C.Views
                 }
                 else
                 {
-                    await App.Current.MainPage.Navigation.PushAsync(new HomePage(_userData));
+                    await Navigation.PushAsync(new HomePage(_userModel));
+                    //await App.Current.MainPage.Navigation.PushAsync(new HomePage(_userData));
                 }
             }
             else
@@ -110,7 +111,6 @@ namespace MobileAuthB2C.Views
                 await App.Current.MainPage.DisplayAlert("Login Failed", _userData.Error, "OK");
             }
 
-            await Navigation.PushAsync(new HomePage(_userModel));
         }
     }
 }

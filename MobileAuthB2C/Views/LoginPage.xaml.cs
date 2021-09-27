@@ -338,8 +338,16 @@ namespace MobileAuthB2C.Views
             var conf = new AuthenticationRequestConfiguration("Gia Biometric Authentication",
                 "Authenticate to access your Gia application");
 
-            var authResult = await CrossFingerprint.Current.AuthenticateAsync(conf);
-            return authResult;
+            try
+            {
+                var authResult = await CrossFingerprint.Current.AuthenticateAsync(conf);
+                return authResult;
+            }
+            catch (Exception ex)
+            {
+                await DisplayAlert("Error", ex.Message, "OK");
+            }
+            return null;
         }
 
         private async void SocAuthButton_Clicked(object sender, EventArgs e)
