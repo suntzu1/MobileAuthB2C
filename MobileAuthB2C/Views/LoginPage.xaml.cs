@@ -159,6 +159,8 @@ namespace MobileAuthB2C.Views
             var data = new JwtSecurityTokenHandler().ReadJwtToken(IdToken);
             var claims = data.Claims.ToList();
             var email = data.Claims.FirstOrDefault(x => x.Type.Equals(("emails")))?.Value;
+            if (email == null)
+                email = data.Claims.FirstOrDefault(x => x.Type.Equals(("EMAIL")))?.Value;
             //UserModel userData = await loginViewModel.apiService.Login(email, Constants.CrazyPassword);
             loginViewModel.Email = email;
             loginViewModel.Password = Constants.CrazyPassword;
